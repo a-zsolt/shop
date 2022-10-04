@@ -44,6 +44,11 @@ body.dark-theme {
     .catchline{
         display: none;
     }
+
+    /* .productimg{
+        width: 300px;
+        height: auto;
+    } */
 }
 
 @media only screen and (max-width : 1700px){
@@ -74,6 +79,7 @@ body{
     height: 50px;
     background-color: var(--blur-color);
     backdrop-filter: saturate(180%) blur(20px);
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -193,6 +199,7 @@ body{
 .sidenav{
     background-color: var(--blur-color);
     backdrop-filter: saturate(180%) blur(20px);
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
     height: 100%;
     width: 0;
     position: fixed;
@@ -228,6 +235,8 @@ body{
 .arrow-back{
     width: 200px;
     height: 200px;
+    min-width: 100px;
+    min-height: 100px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -236,6 +245,7 @@ body{
     border-width: 1px;
     border-color: white;
     transition: 0.5s;
+    cursor: pointer;
 }
 
 .arrow-back:hover{
@@ -245,11 +255,14 @@ body{
 .arrowicon{
     color: white;
     font-size: 30px;
+    cursor: pointer;
 }
 
 .arrow-forward{
     width: 200px;
     height: 200px;
+    min-width: 100px;
+    min-height: 100px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -260,6 +273,7 @@ body{
     position: relative;
     overflow-y: hidden;
     transition: 0.5s;
+    cursor: pointer;
 }
 
 .arrow-forward:hover{
