@@ -2,6 +2,7 @@ const modeicon = document.getElementsByClassName("modeswitchicon")
 const sidenav = document.getElementsByClassName("sidenav")
 const showcase = document.getElementsByClassName("showcase")
 const arrow = document.getElementsByClassName("arrowicon")
+const navbar = document.getElementsByClassName("navbar");
 
 const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
 function dark() {

@@ -46,9 +46,20 @@ body.dark-theme {
     }
 }
 
+@media only screen and (max-width : 1700px){
+    .cards{
+        flex-wrap: wrap;
+    }
+
+    .card{
+        margin-bottom: 20px;
+    }
+}
+
 body{
     background-color: var(--bkg-color);
     margin: 0px;
+    overflow-x: hidden;
 }
 
 .text{
@@ -66,6 +77,13 @@ body{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    z-index: 10;
+    position: fixed;
+    top: 0;
+}
+
+.container{
+    margin-top: 50px;
 }
 
 .title{
@@ -178,7 +196,7 @@ body{
     height: 100%;
     width: 0;
     position: fixed;
-    z-index: 10;
+    z-index: 1;
     top: 50px;
     left: 0;
     overflow-x: hidden;
@@ -291,11 +309,6 @@ body{
 
 .cards{
     display: flex;
-    overflow: auto;
-    overflow-x: hidden;
-    max-width: 100%;
-    scroll-snap-type: x mandatory;
-    scroll-padding: 0 24px;
 }
 
 .card{
@@ -309,7 +322,6 @@ body{
     transition: all .3s cubic-bezier(0,0,.5,1);
     white-space: normal;
     cursor: pointer;
-    scroll-snap-align: start;
 }
 
 .card:hover{
