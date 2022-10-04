@@ -383,8 +383,20 @@ body{
 }
 
 /* buying page */
+@media only screen and (max-width : 1600px){
+    .buyselctioncontainer{
+        width: 100%;
+    }
+}
+@media only screen and (min-width : 1600px){
+    .buyselctioncontainer{
+        width: 20%;
+    }
+}
+
 .buycontent{
     padding: 50px;
+    margin-top: 50px;
 }
 
 .buytitle{
@@ -408,7 +420,6 @@ body{
 }
 
 .buyimgmain{
-    margin-top: 50px;
     height: 100%;
     width: 100%;
     max-width: 1200px;
@@ -416,8 +427,26 @@ body{
 }
 
 .buymain{
+    margin-top: 50px;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.buyselctioncontainer{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.buysizesection{
+    width: 100%;
+}
+
+.selecttitle{
+    font-size: 20px;
+    font-weight: 100;
 }
 
 .select{
@@ -427,6 +456,9 @@ body{
     display: flex;
     align-items: center;
     padding: 20px;
+    margin-bottom: 20px;
+    justify-content: space-between;
+    cursor: pointer;
 }
 
 .selectname{
@@ -443,7 +475,6 @@ body{
 
 .selectprice{
     margin: 0px;
-    margin-left: 50px;
 }
 
 .colorselectors{
@@ -455,6 +486,8 @@ body{
     border-radius: 8px;
     width: 30px;
     height: 30px;
+    cursor: pointer;
+    margin-bottom: 40px;
 }
 
 #purple{
@@ -471,4 +504,23 @@ body{
 
 #black{
     background-color: #282726;
+}
+
+.buyoptions{
+    width: 100%;
+}
+
+.buybtn2{
+    background-color: #0000ff;
+    border-radius: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.buybtntext{
+    color: white;
 }
