@@ -39,5 +39,5 @@ function showarrow(x){
 }
 
 function openbuyiphone(){
-    window.open("./buy-iphone14.html", "_self")
+    window.open("html/buy-iphone14.html", "_self")
 }

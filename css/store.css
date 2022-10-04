@@ -296,6 +296,7 @@ body{
 .card{
     width: 400px;
     height: 500px;
+    min-width: 300px;
     margin-right: 20px;
     border-radius: 18px;
     background-color: var(--div-color);
@@ -303,6 +304,11 @@ body{
     transition: all .3s cubic-bezier(0,0,.5,1);
     white-space: normal;
     cursor: pointer;
+    overflow: auto;
+    overflow-x: hidden;
+    max-width: 100%;
+    scroll-snap-type: x mandatory;
+    scroll-padding: 0 24px;
 }
 
 .card:hover{
