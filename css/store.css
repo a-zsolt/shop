@@ -232,6 +232,10 @@ body{
     overflow-y: hidden;
 }
 
+.productimg{
+    cursor: pointer;
+}
+
 .arrow-back{
     width: 200px;
     height: 200px;
@@ -523,4 +527,23 @@ body{
 
 .buybtntext{
     color: white;
+}
+
+.colorway{
+    width: 80px;
+    height: 8px;
+    margin-top: 10px;
+    border-radius: 18px;
+}
+
+#green{
+    background-color: #507b8c;
+}
+
+#brown{
+    background-color: #69615a;
+}
+
+#dior{
+    background-color: #afaeb4;
 }

@@ -39,6 +39,20 @@ function showarrow(x){
     arrow[x].style.cssText = 'color: white;'
 }
 
-function openbuyiphone(){
-    window.open("html/buy-iphone14.html", "_self")
+function openbuysite(x){
+    console.log(x)
+    console.log(x.id)
+    if(x.id == 'iphone14'){
+        window.open("html/buy-iphone14.html", "_self")
+    }else if(x.id == 'ps5'){
+        window.open("html/buy-playstation5.html", "_self")
+    }else if(x.id == 'rtx3090'){
+        window.open("html/buy-rtx3090.html", "_self")
+    }else if(x.id == 'index'){
+        window.open("html/buy-index.html", "_self")
+    }else if(x.id == 'deck'){
+        window.open("html/buy-deck.html", "_self")
+    }else if(x.id == 'jordan1'){
+        window.open("html/buy-jordan1.html", "_self")
+    }
 }
