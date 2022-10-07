@@ -428,6 +428,9 @@ body{
     width: 100%;
     max-width: 1200px;
     border-radius: 18px;
+    transition-property: opacity;
+    transition-timing-function: ease-in-out;
+    transition-duration: .4s;
 }
 
 .buymain{
@@ -546,4 +549,10 @@ body{
 
 #dior{
     background-color: #afaeb4;
+}
+
+.selected{
+    border-width: 2px;
+    border-style: solid;
+    border-color: #0071e3;
 }

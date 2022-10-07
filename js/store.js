@@ -1,8 +1,21 @@
+//main site
 const modeicon = document.getElementsByClassName("modeswitchicon")
 const sidenav = document.getElementsByClassName("sidenav")
 const showcase = document.getElementsByClassName("showcase")
 const arrow = document.getElementsByClassName("arrowicon")
 const navbar = document.getElementsByClassName("navbar");
+
+//buy sties
+const buyimgmain = document.getElementById("buyimgmain")
+
+const pro = document.getElementById("pro")
+const promax = document.getElementById("promax")
+
+const purple = document.getElementById("purple")
+const gold = document.getElementById("gold")
+const silver = document.getElementById("silver")
+const black = document.getElementById("black")
+
 
 const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
 function dark() {
@@ -40,8 +53,6 @@ function showarrow(x){
 }
 
 function openbuysite(x){
-    console.log(x)
-    console.log(x.id)
     if(x.id == 'iphone14'){
         window.open("html/buy-iphone14.html", "_self")
     }else if(x.id == 'ps5'){
@@ -55,4 +66,50 @@ function openbuysite(x){
     }else if(x.id == 'jordan1'){
         window.open("html/buy-jordan1.html", "_self")
     }
+}
+
+function iphoneselect(x){
+    if(x.id == 'pro'){
+        pro.classList.add("selected")
+        promax.classList.remove("selected")
+        var size = ['pro']
+    }else if (x.id == 'promax'){
+        promax.classList.add("selected")
+        pro.classList.remove("selected")
+        var size = ['promax']
+    }else if(x.id == 'purple'){
+        purple.classList.add("selected")
+        gold.classList.remove("selected")
+        silver.classList.remove("selected")
+        black.classList.remove("selected")
+        buyimgmain.src = "../pics/iphone14_purple_buy.png"
+        var color = ['purple']
+    }else if(x.id == 'gold'){
+        gold.classList.add("selected")
+        purple.classList.remove("selected")
+        silver.classList.remove("selected")
+        black.classList.remove("selected")
+        buyimgmain.src = "../pics/iphone14_gold_buy.png"
+        var color = ['gold']
+    }else if(x.id == 'silver'){
+        silver.classList.add("selected")
+        gold.classList.remove("selected")
+        purple.classList.remove("selected")
+        black.classList.remove("selected")
+        buyimgmain.src = "../pics/iphone14_white_buy.png"
+        var color = ['silver']
+    }else if(x.id == 'black'){
+        black.classList.add("selected")
+        gold.classList.remove("selected")
+        purple.classList.remove("selected")
+        silver.classList.remove("selected")
+        buyimgmain.src = "../pics/iphone14_black_buy.png"
+        var color = ['black']
+    }
+}
+
+function gimmiecookie(){
+    document.cookie = "username=Nigger; expires=Thu, 18 Dec 2022 12:00:00 UTC; path=/";
+    let x = document.cookie
+    console.log(x);
 }
