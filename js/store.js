@@ -147,11 +147,9 @@ function getCookie(cname) {
 
 function checkCookie() {
     let cart = getCookie("itemsincart");
-    if (cart != "") {
+    if (cart != "0") {
         cartnum[0].innerHTML = '(' + cart + ')'
-    } else {
-        setCookie("itemsincart", 0, 30);
-    }
+    } 
 }
 
 function buynow() {
