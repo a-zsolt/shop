@@ -16,7 +16,7 @@ const gold = document.getElementById("gold")
 const silver = document.getElementById("silver")
 const black = document.getElementById("black")
 
-
+//color scheme
 const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
 function dark() {
     if (prefersDarkScheme.matches) {
@@ -35,11 +35,11 @@ function icocheck(){
         modeicon[0].innerHTML = `light_mode`
     }
 }
-
+//menu button
 function menu(x){
     x.classList.toggle("change")
 }
-
+//side nav open
 function openNav(){
     sidenav[0].classList.toggle("open")
 }
@@ -47,11 +47,11 @@ function openNav(){
 function hidearrow(x){
     arrow[x].style.cssText = 'color: blue;'
 }
-
+//arrow hover
 function showarrow(x){
     arrow[x].style.cssText = 'color: white;'
 }
-
+//buy sites
 function openbuysite(x){
     if(x.id == 'iphone14'){
         window.open("html/buy-iphone14.html", "_self")
@@ -67,7 +67,7 @@ function openbuysite(x){
         window.open("html/buy-jordan1.html", "_self")
     }
 }
-
+//iphone configuration
 function iphoneselect(x){
     if(x.id == 'pro'){
         pro.classList.add("selected")
@@ -108,8 +108,4 @@ function iphoneselect(x){
     }
 }
 
-function gimmiecookie(){
-    document.cookie = "username=Nigger; expires=Thu, 18 Dec 2022 12:00:00 UTC; path=/";
-    let x = document.cookie
-    console.log(x);
-}
+document.cookie(`itemsinbag=0; expire=${date.setDate(date.getDate() + 1)}; path=/`)
