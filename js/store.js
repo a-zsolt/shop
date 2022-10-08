@@ -4,6 +4,7 @@ const sidenav = document.getElementsByClassName("sidenav")
 const showcase = document.getElementsByClassName("showcase")
 const arrow = document.getElementsByClassName("arrowicon")
 const navbar = document.getElementsByClassName("navbar");
+const cartnum = document.getElementsByClassName("cartnum");
 
 //buy sties
 const buyimgmain = document.getElementById("buyimgmain")
@@ -128,30 +129,35 @@ function setCookie(cname,cvalue,exdays) {
     document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
   }
   
-  function getCookie(cname) {
+function getCookie(cname) {
     let name = cname + "=";
     let decodedCookie = decodeURIComponent(document.cookie);
     let ca = decodedCookie.split(';');
     for(let i = 0; i < ca.length; i++) {
-      let c = ca[i];
-      while (c.charAt(0) == ' ') {
+        let c = ca[i];
+        while (c.charAt(0) == ' ') {
         c = c.substring(1);
-      }
-      if (c.indexOf(name) == 0) {
+        }
+        if (c.indexOf(name) == 0) {
         return c.substring(name.length, c.length);
-      }
+        }
     }
     return "";
-  }
-  
-  function checkCookie() {
-    let user = getCookie("username");
-    if (user != "") {
-      alert("Welcome again " + user);
-    } else {
-       user = prompt("Please enter your name:","");
-       if (user != "" && user != null) {
-         setCookie("username", user, 30);
-       }
     }
-  }
+
+function checkCookie() {
+    let cart = getCookie("itemsincart");
+    if (cart != "") {
+        cartnum[0].innerHTML = '(' + cart + ')'
+    } else {
+        setCookie("itemsincart", 0, 30);
+    }
+}
+
+function buynow() {
+    let cart = getCookie("itemsincart")
+    setCookie("itemsincart", parseInt(cart)+1, 30);
+    checkCookie()
+}
+
+
