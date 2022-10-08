@@ -107,6 +107,15 @@ function iphoneselect(x){
         var color = ['black']
     }
 }
-
-var date = new Date()
-document.cookie(`itemsinbag=0; expire=${date.setDate(date.getDate() + 1)}; path=/`)
+cookiessetup()
+function cookiessetup(){
+    var setCookie = function (name, value) {
+        var date = new Date(),
+            expires = 'expires=';
+        date.setTime(date.getTime() + 1);
+        expires += date.toGMTString();
+        document.cookie = name + '=' + value + '; ' + expires + '; path=/';
+    }
+    
+    setCookie("itemsincart", "0")
+}
