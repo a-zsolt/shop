@@ -108,4 +108,5 @@ function iphoneselect(x){
     }
 }
 
+var date = new Date()
 document.cookie(`itemsinbag=0; expire=${date.setDate(date.getDate() + 1)}; path=/`)
