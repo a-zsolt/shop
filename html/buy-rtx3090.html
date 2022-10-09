@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
     <link rel="stylesheet" href="../css/store.css">
     <link rel="shortcut icon" href="../pics/storeicon.png" type="image/x-icon">
-    <script src="../js/store.js"></script>
     <title>Buy RTX 3090</title>
 </head>
 <body>
@@ -51,7 +50,7 @@
             <div class="buyselctioncontainer">
                 <div class="buysizesection">
                     <p class="selecttitle text">RTX 3090 Model</p>
-                    <div class="select">
+                    <div class="select selected" id="rtx" onclick="rtx3090select(this)">
                         <div>
                             <p class="selectname text">RTX 3090</p>
                             <p class="selectsize text">Boost Clock 1.70 GHz</p>
@@ -60,7 +59,7 @@
                             <p class="selectprice text">$999</p>
                         </div>
                     </div>
-                    <div class="select">
+                    <div class="select" id="ti" onclick="rtx3090select(this)">
                         <div>
                             <p class="selectname text">RTX 3090 Ti</p>
                             <p class="selectsize text">Boost Clock 1.86 GHz</p>
@@ -81,4 +80,5 @@
             </div>
         </div>
     </div>
+    <script src="../js/store.js"></script>
 </body>

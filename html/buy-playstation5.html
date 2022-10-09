@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
     <link rel="stylesheet" href="../css/store.css">
     <link rel="shortcut icon" href="../pics/storeicon.png" type="image/x-icon">
-    <script src="../js/store.js"></script>
     <title>Buy Playstation 5</title>
 </head>
 <body>
@@ -47,11 +46,11 @@
             <p class="buyprice text">from $499</p>
         </div>
         <div class="buymain">
-            <img class="buyimgmain" src="../pics/ps5_buy.png" alt="">
+            <img class="buyimgmain" id="buyimgmain" src="../pics/ps5_buy.png" alt="">
             <div class="buyselctioncontainer">
                 <div class="buysizesection">
                     <p class="selecttitle text">Playstation Model</p>
-                    <div class="select">
+                    <div class="select selected" id="ps5" onclick="ps5select(this)">
                         <div>
                             <p class="selectname text">PS5</p>
                             <p class="selectsize text">With blue-ray</p>
@@ -60,7 +59,7 @@
                             <p class="selectprice text">$499</p>
                         </div>
                     </div>
-                    <div class="select">
+                    <div class="select" id="digital" onclick="ps5select(this)">
                         <div>
                             <p class="selectname text">PS5 digital edition</p>
                             <p class="selectsize text">No blue-ray</p>
@@ -81,4 +80,5 @@
             </div>
         </div>
     </div>
+    <script src="../js/store.js"></script>
 </body>

@@ -12,11 +12,25 @@ const buyimgmain = document.getElementById("buyimgmain")
 
 const pro = document.getElementById("pro")
 const promax = document.getElementById("promax")
-
 const purple = document.getElementById("purple")
 const gold = document.getElementById("gold")
 const silver = document.getElementById("silver")
 const black = document.getElementById("black")
+
+const ps5 = document.getElementById("ps5")
+const digital = document.getElementById("digital")
+
+const rtx = document.getElementById("rtx")
+const ti = document.getElementById("ti")
+
+const kit = document.getElementById("kit")
+const headset = document.getElementById("headset")
+const controller = document.getElementById("controller")
+const base = document.getElementById("base")
+
+const gb64 = document.getElementById("gb64")
+const gb256 = document.getElementById("gb256")
+const gb512 = document.getElementById("gb512")
 
 //cart site
 const cartitem = document.getElementsByClassName("cartitem")
@@ -83,7 +97,7 @@ function openbuysite(x){
 function opencartsite(x){
     window.open("cart.html", "_self")
 }
-//iphone configuration
+//iphone config
 function iphoneselect(x){
     if(x.id == 'pro'){
         pro.classList.add("selected")
@@ -123,6 +137,68 @@ function iphoneselect(x){
         var color = ['black']
     }
 }
+//PS5 config
+function ps5select(x){
+    if(x.id == 'ps5'){
+        ps5.classList.add("selected")
+        digital.classList.remove("selected")
+        buyimgmain.src = "../pics/ps5_buy.png"
+    }else if(x.id == 'digital'){
+        digital.classList.add("selected")
+        ps5.classList.remove("selected")
+        buyimgmain.src = "../pics/ps5_digital_buy.png"
+    }
+}
+//rtx 3090 config
+function rtx3090select(x){
+    if(x.id == 'rtx'){
+        rtx.classList.add("selected")
+        ti.classList.remove("selected")
+    }else if (x.id == 'ti'){
+        ti.classList.add("selected")
+        rtx.classList.remove("selected")
+    }
+}
+//index config
+function indexselect(x){
+    if(x.id == 'kit'){
+        kit.classList.add("selected")
+        headset.classList.remove("selected")
+        controller.classList.remove("selected")
+        base.classList.remove("selected")
+        buyimgmain.src = "../pics/index_kit_buy.png"
+    }else if (x.id == 'headset'){
+        headset.classList.toggle("selected")
+        kit.classList.remove("selected")
+        buyimgmain.src = "../pics/index_headset_buy.png"
+    }else if (x.id == 'controller'){
+        controller.classList.toggle("selected")
+        kit.classList.remove("selected")
+        buyimgmain.src = "../pics/index_controller_buy.png"
+    }else if (x.id == 'base'){
+        base.classList.toggle("selected")
+        kit.classList.remove("selected")
+        buyimgmain.src = "../pics/index_base_station_buy.png"
+    }
+}
+
+//deck config
+function deckselect(x){
+    if(x.id == 'gb64'){
+        gb64.classList.add("selected")
+        gb256.classList.remove("selected")
+        gb512.classList.remove("selected")
+    }else if(x.id == 'gb256'){
+        gb256.classList.add("selected")
+        gb64.classList.remove("selected")
+        gb512.classList.remove("selected")
+    }else if(x.id == 'gb512'){
+        gb512.classList.add("selected")
+        gb64.classList.remove("selected")
+        gb256.classList.remove("selected")
+    }
+}
+
 cookiessetup()
 function cookiessetup(){
     var setCookie = function (name, value) {
