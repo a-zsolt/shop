@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <link rel="stylesheet" href="../css/store.css">
+    <link rel="shortcut icon" href="../pics/storeicon.png" type="image/x-icon">
+    <script src="../js/store.js"></script>
+    <title>Cart</title>
+</head>
+<body onload="checkCookie(), cartcalc()">
+<div class="navbar">
+    <div class="title">
+        <span class="material-symbols-rounded titleicon">store</span>
+        <h3 class="titletext text">No cap best store</h3>
+    </div>
+    <div class="catchline">
+        <pre class="chatchlinetext text " id="scroll-text1">Best products for the best prices // Jordan 1 back in stock // 20% off on electronics // use cupon code #uwu to get 10% off your purchase*</pre>
+    </div>
+    <div class="buttons">
+        <div class="cart" id="cart" onclick="openbuysite(this)">
+            <p class="carttext text">CART</p>
+            <p class="cartnum text">(4)</p>
+        </div>
+        <div class="menubtn" onclick="menu(this), openNav()">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+        </div>
+    </div>
+</div>
+<div class="sidenav">
+    <pre class="text link">All products</pre>
+    <p class="text link">Support</p>
+    <p class="text link">Blog</p>
+    <p class="text link">Socials</p>
+    <div class="modeswitch">
+        <span class="material-symbols-rounded modeswitchicon" onclick="dark()">light_mode</span>
+    </div>
+</div>
+<div class="cartcontent">
+    <div class="buytitle">
+        <h1 class="buytitletext text">Your Cart</h1>
+        <p class="buyprice text">free delivery from $100</p>
+    </div> 
+    <div class="cartitemscontainer">
+        <div class="cartitems">
+            <div class="cartitem" id="1">
+                <img src="../pics/iphone14_default_buy.png" alt="cartitemimg" class="cartitemimg">
+                <p class="itemincartname text">iPhone 14 Pro 256GB Purple</p>
+                <select name="amountofitem" class="amountofitem" id="amountofitem1" onchange="multiplier(this)">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+                <p class="itemincartprice text" id="899">$899</p>
+                <span class="material-symbols-rounded itemincartremove">close</span>
+            </div>
+            <div class="cartitem" id="2">
+                <img src="../pics/jordan_blue_buy.png" alt="cartitemimg" class="cartitemimg">
+                <p class="itemincartname text">Jordan 1 High Turbo Green</p>
+                <select name="amountofitem" class="amountofitem" id="amountofitem2" onchange="multiplier(this)">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+                <p class="itemincartprice text" id="769">$769</p>
+                <span class="material-symbols-rounded itemincartremove">close</span>
+            </div>
+            <div class="cartitem" id="3">
+                <img src="../pics/deck_buy.png" alt="cartitemimg" class="cartitemimg">
+                <p class="itemincartname text">Steam Deck 512GB NVMe</p>
+                <select name="amountofitem" class="amountofitem" id="amountofitem3" onchange="multiplier(this)">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+                <p class="itemincartprice text" id="499">$499</p>
+                <span class="material-symbols-rounded itemincartremove">close</span>
+            </div>
+            <div class="cartitem" id="4">
+                <img src="../pics/index_base_station_buy.png" alt="cartitemimg" class="cartitemimg">
+                <p class="itemincartname text">Valve Index Base Station</p>
+                <select name="amountofitem" class="amountofitem" id="amountofitem4" onchange="multiplier(this)">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+                <p class="itemincartprice text" id="99">$99</p>
+                <span class="material-symbols-rounded itemincartremove">close</span>
+            </div>
+            <div class="totalpricecontainer">
+                <div class="totalprice">
+                    <div class="subtotal">
+                        <p class="subtotaltext text">Subtotal</p>
+                        <p class="subtotalnum text">$0</p>   
+                    </div>
+                    <div class="shipping">
+                        <p class="shippingtext text">Shipping</p>
+                        <p class="shippingnum text">FREE</p>
+                    </div>
+                    <div class="tax">
+                        <p class="taxtext text">Estimated taxes for: Hungary</p>
+                        <p class="taxnum text">27%</p> 
+                    </div>
+                    <div class="line"></div>
+                    <div class="total">
+                        <p class="totaltext text">Total</p>
+                        <p class="totalnum text">$0</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>

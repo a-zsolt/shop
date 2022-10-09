@@ -5,6 +5,7 @@ const showcase = document.getElementsByClassName("showcase")
 const arrow = document.getElementsByClassName("arrowicon")
 const navbar = document.getElementsByClassName("navbar");
 const cartnum = document.getElementsByClassName("cartnum");
+const cartbtn = document.getElementsByClassName("cart");
 
 //buy sties
 const buyimgmain = document.getElementById("buyimgmain")
@@ -16,6 +17,14 @@ const purple = document.getElementById("purple")
 const gold = document.getElementById("gold")
 const silver = document.getElementById("silver")
 const black = document.getElementById("black")
+
+//cart site
+const cartitem = document.getElementsByClassName("cartitem")
+const itemprice = document.getElementsByClassName("itemincartprice")
+const subtotal = document.getElementsByClassName("subtotalnum")
+const shipping = document.getElementsByClassName("shippingnum")
+const tax = document.getElementsByClassName("taxnum")
+const total = document.getElementsByClassName("totalnum")
 
 //color scheme
 const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
@@ -66,7 +75,13 @@ function openbuysite(x){
         window.open("html/buy-deck.html", "_self")
     }else if(x.id == 'jordan1'){
         window.open("html/buy-jordan1.html", "_self")
+    }else if(x.id == 'cart'){
+        window.open("html/cart.html", "_self")
     }
+}
+//open cart form buy sites
+function opencartsite(x){
+    window.open("cart.html", "_self")
 }
 //iphone configuration
 function iphoneselect(x){
@@ -158,6 +173,51 @@ function buynow() {
     let cart = getCookie("itemsincart")
     setCookie("itemsincart", parseInt(cart)+1, 30);
     checkCookie()
+}
+
+function cartcalc(){
+    //calculating the price of the items in cart
+    const items = []
+    for (let index = 0; index < cartitem.length; index++) {
+        items[index] = parseInt(itemprice[index].innerHTML.substring(1))
+    }
+    let price = 0
+    for (let index = 0; index < cartitem.length; index++) {
+        price += items[index];
+    }
+    //displaying the price of the items in car
+    subtotal[0].innerHTML = `$${price}`
+
+    //calculating and displaying the shipping price
+    let shippingprice = 0
+    if (price < 100){
+        shipping[0].innerHTML = `$50`
+        shippingprice = 50
+    } else{
+        shipping[0].innerHTML = `FREE`
+        shippingprice = 0
+    }
+
+    //calculating and displaying the taxes
+    var taxprice = price*0.27
+    tax[0].innerHTML = `$${Math.round(taxprice * 100) / 100}`
+
+    //calculating and displaying the total
+    total[0].innerHTML = `$${price + shippingprice + taxprice}`
+}
+
+function multiplier(x){
+    var amount = x.value;
+    if(x.id == 'amountofitem1'){
+        itemprice[0].innerHTML = `$${amount*itemprice[0].id}`
+    }else if(x.id == 'amountofitem2'){
+        itemprice[1].innerHTML = `$${amount*itemprice[1].id}`
+    }else if(x.id == 'amountofitem3'){
+        itemprice[2].innerHTML = `$${amount*itemprice[2].id}`
+    }else if(x.id == 'amountofitem4'){
+        itemprice[3].innerHTML = `$${amount*itemprice[3].id}`
+    }
+    cartcalc()
 }
 
 
