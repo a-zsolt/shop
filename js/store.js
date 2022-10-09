@@ -32,6 +32,10 @@ const gb64 = document.getElementById("gb64")
 const gb256 = document.getElementById("gb256")
 const gb512 = document.getElementById("gb512")
 
+const green = document.getElementById("turbo")
+const goofy = document.getElementById("goofy")
+const dior = document.getElementById("dioor")
+
 //cart site
 const cartitem = document.getElementsByClassName("cartitem")
 const itemprice = document.getElementsByClassName("itemincartprice")
@@ -196,6 +200,22 @@ function deckselect(x){
         gb512.classList.add("selected")
         gb64.classList.remove("selected")
         gb256.classList.remove("selected")
+    }
+}
+//jordan config
+function jordanselect(x){
+    if (x.id == 'turbo'){
+        green.classList.add("selected")
+        goofy.classList.remove("selected")
+        dior.classList.remove("selected")
+    }else if (x.id == 'goofy'){
+        goofy.classList.add("selected")
+        green.classList.remove("selected")
+        dior.classList.remove("selected")
+    }else if (x.id == 'dioor'){
+        dior.classList.add("selected")
+        green.classList.remove("selected")
+        goofy.classList.remove("selected")
     }
 }
 

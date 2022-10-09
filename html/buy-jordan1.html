@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
     <link rel="stylesheet" href="../css/store.css">
     <link rel="shortcut icon" href="../pics/storeicon.png" type="image/x-icon">
-    <script src="../js/store.js"></script>
     <title>Buy Jordan 1</title>
 </head>
 <body>
@@ -47,11 +46,11 @@
             <p class="buyprice text">from $769</p>
         </div>
         <div class="buymain">
-            <img class="buyimgmain" src="../pics/jordan_blue_buy.png" alt="">
+            <img class="buyimgmain" id="buyimgmain" src="../pics/jordan_blue_buy.png" alt="">
             <div class="buyselctioncontainer">
                 <div class="buysizesection">
                     <p class="selecttitle text">Jordan 1 Colorway</p>
-                    <div class="select">
+                    <div class="select selected" id="turbo" onclick="jordanselect(this)">
                         <div>
                             <p class="selectname text">Turbo Green</p>
                             <div class="colorway" id="green"></div>
@@ -60,7 +59,7 @@
                             <p class="selectprice text">$769</p>
                         </div>
                     </div>
-                    <div class="select">
+                    <div class="select" id="goofy" onclick="jordanselect(this)">
                         <div>
                             <p class="selectname text">Dark Mocha</p>
                             <div class="colorway" id="brown"></div>
@@ -69,7 +68,7 @@
                             <p class="selectprice text">$399</p>
                         </div>
                     </div>
-                    <div class="select">
+                    <div class="select" id="dioor" onclick="jordanselect(this)">
                         <div>
                             <p class="selectname text">Dior</p>
                             <div class="colorway" id="dior"></div>
@@ -90,4 +89,5 @@
             </div>
         </div>
     </div>
+    <script src="../js/store.js"></script>
 </body>
