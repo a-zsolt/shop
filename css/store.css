@@ -569,7 +569,7 @@ body{
     }
 
     .cartitemimg{
-        width: 279px;
+        width: 100%;
         height: auto;
     }
 
