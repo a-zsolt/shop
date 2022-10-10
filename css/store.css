@@ -80,7 +80,6 @@ body.dark-theme {
 
     .desciption {
         width: auto;
-        color: lightgrey;
         font-size: 12px;
     }
 
@@ -109,7 +108,6 @@ body.dark-theme {
 
     .desciption {
         width: 500px;
-        color: lightgrey;
         font-size: 12px;
     }
 }
@@ -353,6 +351,10 @@ body{
     text-decoration: underline;
     color: white;
     cursor: pointer;
+}
+
+.desciption{
+    color: lightgray;
 }
 
 .line2{
