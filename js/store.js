@@ -208,14 +208,17 @@ function jordanselect(x){
         green.classList.add("selected")
         goofy.classList.remove("selected")
         dior.classList.remove("selected")
+        buyimgmain.src = "../pics/jordan_blue_buy.png"
     }else if (x.id == 'goofy'){
         goofy.classList.add("selected")
         green.classList.remove("selected")
         dior.classList.remove("selected")
+        buyimgmain.src = "../pics/jordan_brown_buy.png"
     }else if (x.id == 'dioor'){
         dior.classList.add("selected")
         green.classList.remove("selected")
         goofy.classList.remove("selected")
+        buyimgmain.src = "../pics/jordan_dior_buy.png"
     }
 }
 
@@ -315,5 +318,3 @@ function multiplier(x){
     }
     cartcalc()
 }
-
-
