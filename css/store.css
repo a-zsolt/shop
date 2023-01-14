@@ -213,7 +213,6 @@ body{
     cursor: pointer;
     user-select: none;
     height: 24px;
-    margin-top: 16px;
 }
 
 .modeswitchicon{
@@ -261,26 +260,26 @@ body{
     background-color: var(--blur-color);
     backdrop-filter: saturate(180%) blur(20px);
     -webkit-backdrop-filter: saturate(180%) blur(20px);
-    height: 100%;
-    width: 0;
+    height: 0px;
+    width: 100%;
     position: fixed;
     z-index: 1;
     top: 50px;
-    left: 0;
-    overflow-x: hidden;
+    overflow: hidden;
     transition: 0.5s;
-    padding-top: 60px;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: space-evenly;
     align-items: center;
 }
 
 .open{
-    width: 250px;
+    height: 200px;
 }
 
 .link{
     cursor: pointer;
+    text-decoration: none;
 }
 
 .productimg{
@@ -628,10 +627,6 @@ body{
 }
 
 @media only screen and (min-width : 850px){
-    .itemincartremove{
-
-    }
-
     .cartitemimg{
         width: auto;
         height: 100px;

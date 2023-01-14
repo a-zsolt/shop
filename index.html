@@ -13,10 +13,12 @@
 </head>
 <body onload="checkCookie()">
 <div class="navbar">
-    <div class="title">
-        <span class="material-symbols-rounded titleicon">store</span>
-        <h3 class="titletext text">No cap best store</h3>
-    </div>
+    <a href="#" class="link">
+        <div class="title">
+            <span class="material-symbols-rounded titleicon">store</span>
+            <h3 class="titletext text">No cap best store</h3>
+        </div>
+    </a>
     <div class="catchline">
         <pre class="chatchlinetext text " id="scroll-text1">Best products for the best prices // Jordan 1 back in stock // 20% off on electronics // use cupon code #uwu to get 10% off your purchase*</pre>
     </div>
@@ -40,7 +42,7 @@
         <span class="material-symbols-rounded modeswitchicon" onclick="dark()">light_mode</span>
     </div>
 </div>
-<div class="content">
+<div class="content" onclick="closeNav()">
     <div class="showcase" id="showcase">
         <div class="arrow-back" onmouseover="hidearrow(0)" onmouseleave="showarrow(0)">
             <span class="material-symbols-rounded arrowicon">arrow_back</span>

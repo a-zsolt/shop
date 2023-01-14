@@ -1,4 +1,5 @@
 //main site
+const content = document.getElementsByClassName("content")
 const modeicon = document.getElementsByClassName("modeswitchicon")
 const sidenav = document.getElementsByClassName("sidenav")
 const showcase = document.getElementsByClassName("showcase")
@@ -70,6 +71,17 @@ function menu(x){
 //side nav open
 function openNav(){
     sidenav[0].classList.toggle("open")
+    if (sidenav[0].classList.contains('open')){
+        content[0].style.cssText = 'filter: blur(5px); transition: 0.5s;'
+    }else{
+        content[0].style.cssText = 'filter: blur(0px); transition: 0.5s;'
+    }
+}
+
+//side nav close when clicked on the page
+function closeNav(){
+    sidenav[0].classList.remove("open")
+    content[0].style.cssText = 'filter: blur(0px); transition: 0.5s;'
 }
 
 function hidearrow(x){
